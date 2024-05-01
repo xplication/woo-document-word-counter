@@ -77,7 +77,9 @@ class Woocommerce_Price_Per_Word_Public {
                 $total_character = '';
             }
 
-            wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/woo-document-word-counter-public.js', array('jquery'), $this->version, false);
+            wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/woo-document-word-counter-public.js', array('jquery', 'wp-i18n'), $this->version, false);
+            wp_set_script_translations($this->plugin_name, 'woo-document-word-counter');
+
             if (wp_script_is($this->plugin_name)) {
                 wp_localize_script($this->plugin_name, 'woocommerce_price_per_word_params', apply_filters('woocommerce_price_per_word_params', array(
                     'ajax_url' => admin_url('admin-ajax.php'),
@@ -91,7 +93,8 @@ class Woocommerce_Price_Per_Word_Public {
                     'aewcppw_allow_users_to_enter_qty' => $this->aewcppw_allow_users_to_enter_qty()
                 )));
             }
-            wp_enqueue_script($this->plugin_name . '-bn', plugin_dir_url(__FILE__) . 'js/woo-document-word-counter-bn.js', array('jquery'), $this->version, false);
+            wp_enqueue_script($this->plugin_name . '-bn', plugin_dir_url(__FILE__) . 'js/woo-document-word-counter-bn.js', array('jquery', 'wp-i18n'), $this->version, false);
+            wp_set_script_translations($this->plugin_namev . '-bn', 'woo-document-word-counter');
         }
     }
 

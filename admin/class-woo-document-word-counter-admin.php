@@ -54,7 +54,9 @@ class Woocommerce_Price_Per_Word_Admin {
      * @since    1.0.0
      */
     public function enqueue_scripts() {
-        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/woo-document-word-counter-admin.js', array('jquery'), $this->version, false);
+        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/woo-document-word-counter-admin.js', array('jquery', 'wp-i18n'), $this->version, false);
+        wp_set_script_translations($this->plugin_name, 'woo-document-word-counter');
+
         if (wp_script_is($this->plugin_name)) {
             wp_localize_script($this->plugin_name, 'woocommerce_price_per_word_params', apply_filters('woocommerce_price_per_word_params', array(
                 'woocommerce_currency_symbol_js' => '(' . get_woocommerce_currency_symbol() . ')'
@@ -181,8 +183,8 @@ class Woocommerce_Price_Per_Word_Admin {
             <span
                 id="aewcppw_product_page_message" <?php echo $display_or_hide_ppw_file_upload_div; ?>><?php echo $aewcppw_product_page_message; ?></span>
             <div class="ppw_file_upload_div" <?php echo $display_or_hide_ppw_file_upload_div; ?>>
-                <label for="file_upload">Select your file(s)</label><input type="file" name="ppw_file_upload"
-                                                                           value="Add File" id="ppw_file_upload_id">
+                <label class="button" for="ppw_file_upload_id"><?= __('Select your file(s)', 'woo-document-word-counter') ?></label>
+                <input style="display:none;" type="file" name="ppw_file_upload" value="Add File" id="ppw_file_upload_id">
             </div>
             <div id="ppw_loader" style="display: none;">
                 <div class="ppw-spinner-loader">Loading...</div>
@@ -215,7 +217,7 @@ class Woocommerce_Price_Per_Word_Admin {
                 $decimals = $decimals < wc_get_price_decimals() ? wc_get_price_decimals() : $decimals;
                 $price = wc_price($product->price, array("decimals" => $decimals));
             }
-            $label = apply_filters("ppw_change_html_label_of_price", "Price Per $type:", $type);
+            $label = apply_filters("ppw_change_html_label_of_price", esc_html__("Price Per", "woo-document-word-counter") .' '. $type, $type);
             return __($label, "woo-document-word-counter") . " " . $price;
         } else {
             return $price;
@@ -515,7 +517,7 @@ class Woocommerce_Price_Per_Word_Admin {
             }
 
             $style = "style='display:none;'";
-            echo "<div><p class='ppw_total_price price' $style>Total Price: <span class='ppw_total_amount'>" . $total_price . "</span></p></div>";
+            echo "<div><p class='ppw_total_price price' $style>".__('Total Price:', 'woo-document-word-counter')." <span class='ppw_total_amount'>" . $total_price . "</span></p></div>";
         }
     }
 

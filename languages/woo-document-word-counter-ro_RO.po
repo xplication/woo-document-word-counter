@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2024-04-30T15:53:40+00:00\n"
-"PO-Revision-Date: 2024-04-30 16:03+0000\n"
+"PO-Revision-Date: 2024-05-01 18:24+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: woo-document-word-counter\n"
 "Language: ro_RO\n"
@@ -19,13 +19,39 @@ msgstr ""
 "=0)))? 2 : 1));\n"
 "X-Loco-Version: 2.6.7; wp-6.4.3"
 
-#. Plugin Name of the plugin
-msgid "WooDocument Word Counter"
-msgstr "WooDocument Word Counter"
+#: admin/js/woo-document-word-counter-admin.js:54
+msgid "%s limit"
+msgstr "limita %s"
 
-#. Plugin URI of the plugin
-msgid "https://www.angelleye.com/"
-msgstr "https://www.angelleye.com/"
+#: admin/partials/woo-document-word-counter-admin-setting.php:129
+#: admin/partials/woo-document-word-counter-admin-setting.php:146
+#: admin/partials/woo-document-word-counter-admin-setting.php:164
+#: admin/partials/woo-document-word-counter-admin-setting.php:183
+#: admin/partials/woo-document-word-counter-admin-setting.php:201
+msgid "- Select option"
+msgstr "- Selectați opțiunea"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:125
+msgid "Action"
+msgstr "Acțiune"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:105
+msgid "Action completed; %s records processed."
+msgstr "Acțiune finalizată; %s înregistrări procesate."
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:109
+msgid "Action completed; %s records processed. "
+msgstr "Acțiune finalizată; %s înregistrări procesate."
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:148
+msgid "All products"
+msgstr "Toate produsele"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:31
+msgid "Allow buyers to enter a QTY instead of forcing a document upload."
+msgstr ""
+"Permiteți cumpărătorilor să introducă un QTY în loc să forțeze încărcarea "
+"unui document."
 
 #. Description of the plugin
 msgid ""
@@ -35,43 +61,211 @@ msgstr ""
 "Permiteți utilizatorilor să încarce un document pentru a calcula un preț pe "
 "baza \"prețului pe cuvânt\" stabilit pentru produsul/serviciul respectiv."
 
-#. Author of the plugin
-msgid "Xplication by Iftodi Petru"
-msgstr "Xplication de Iftodi Petru"
+#: admin/partials/woo-document-word-counter-admin-setting.php:120
+msgid "Bulk Edit Tool for Enable or Disable the Price per Words/Characters"
+msgstr ""
+"Instrumentul de editare în masă pentru a activa sau dezactiva prețul pe "
+"cuvinte/caractere"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:179
+msgid "Category"
+msgstr "Categoria"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:166
+msgid "Category..."
+msgstr "Categoria..."
+
+#: admin/js/woo-document-word-counter-admin.js:10
+#: admin/js/woo-document-word-counter-admin.js:20
+#: admin/js/woo-document-word-counter-admin.js:118
+msgid "Character "
+msgstr "Caracter"
+
+#: admin/js/woo-document-word-counter-admin.js:149
+#: admin/js/woo-document-word-counter-admin.js:214
+msgid "Characters"
+msgstr "Caractere"
+
+#: admin/partials/woo-document-word-counter-html-custom-tab.php:50
+msgid ""
+"Choose whether to set pricing based on the number of words in a document or "
+"the number of characters"
+msgstr ""
+"Alegeți dacă doriți să stabiliți prețurile în funcție de numărul de cuvinte "
+"dintr-un document sau de numărul de caractere"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:135
+msgid "Disable Price per Word / Character"
+msgstr "Dezactivați Prețul pe cuvânt / caracter"
+
+#: admin/partials/woo-document-word-counter-html-custom-tab.php:58
+msgid "Enable "
+msgstr "Activați"
+
+#: admin/js/woo-document-word-counter-admin.js:44
+#: admin/js/woo-document-word-counter-admin.js:53
+msgid "Enable %s count cap?"
+msgstr "Activați %s count cap?"
+
+#: admin/partials/woo-document-word-counter-html-custom-tab.php:86
+msgid "Enable price breaks?"
+msgstr "Activați reducerile de preț?"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:133
+msgid "Enable Price per Character"
+msgstr "Activați prețul per caracter"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:131
+msgid "Enable Price per Word"
+msgstr "Activați prețul pe cuvânt"
+
+#: admin/partials/woo-document-word-counter-html-custom-tab.php:62
+msgid "Enable this option and then set a "
+msgstr "Activați această opțiune și apoi setați un"
+
+#: admin/partials/woo-document-word-counter-html-custom-tab.php:88
+msgid "Enable to set multiple prices for multiple levels."
+msgstr "Permiteți să setați mai multe prețuri pentru mai multe niveluri."
+
+#: admin/partials/woo-document-word-counter-html-custom-tab.php:68
+msgid "Enter the maximum word limit to accept uploaded file words."
+msgstr ""
+"Introduceți limita maximă de cuvinte pentru a accepta cuvintele din fișierul "
+"încărcat."
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:209
+msgid "External"
+msgstr "Extern"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:150
+msgid "Featured products"
+msgstr "Produse recomandate"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:207
+msgid "Grouped"
+msgstr "Grupate"
+
+#. Plugin URI of the plugin
+msgid "https://www.angelleye.com/"
+msgstr "https://www.angelleye.com/"
 
 #. Author URI of the plugin
 msgid "https://xplication.com/"
 msgstr "https://xplication.com/"
 
-#: admin/class-woo-document-word-counter-admin.php:528
-msgid "WooCommerce Price Per Word Plugin requires the %s to work!"
-msgstr "WooCommerce Price Per Word Plugin necesită %s pentru a funcționa!"
+#: admin/partials/woo-document-word-counter-html-custom-tab.php:95
+msgid "Max "
+msgstr "Max"
 
-#: admin/class-woo-document-word-counter-admin.php:528
-msgid "WooCommerce"
-msgstr "WooCommerce"
+#: admin/js/woo-document-word-counter-admin.js:56
+msgid "Max Characters"
+msgstr "Caractere maxime"
+
+#: admin/js/woo-document-word-counter-admin.js:47
+#: admin/js/woo-document-word-counter-admin.js:64
+msgid "Max Words"
+msgstr "Max cuvinte"
+
+#: admin/partials/woo-document-word-counter-html-custom-tab.php:94
+msgid "Min "
+msgstr "Min"
+
+#: admin/js/woo-document-word-counter-admin.js:55
+msgid "Min Characters"
+msgstr "Caractere Min"
+
+#: admin/js/woo-document-word-counter-admin.js:46
+#: admin/js/woo-document-word-counter-admin.js:63
+msgid "Min Words"
+msgstr "Cuvinte Min"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:38
+msgid "Minimum Price"
+msgstr "Preț minim"
+
+#: admin/partials/woo-document-word-counter-html-custom-tab.php:96
+msgid "Price ("
+msgstr "Preț ("
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:170
+msgid "Price greater than..."
+msgstr "Preț mai mare decât..."
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:172
+msgid "Price less than..."
+msgstr "Preț mai mic decât..."
+
+#: admin/class-woo-document-word-counter-admin.php:220
+msgid "Price Per"
+msgstr "Preț per"
 
 #: admin/partials/woo-document-word-counter-admin-display.php:72
+#: admin/js/woo-document-word-counter-admin.js:23
+#: admin/js/woo-document-word-counter-admin.js:24
+#: admin/js/woo-document-word-counter-admin.js:42
+#: admin/js/woo-document-word-counter-admin.js:43
+#: admin/js/woo-document-word-counter-admin.js:71
+#: admin/js/woo-document-word-counter-admin.js:84
+#: admin/js/woo-document-word-counter-admin.js:85
+#: admin/js/woo-document-word-counter-admin.js:100
+#: admin/js/woo-document-word-counter-admin.js:101
+#: admin/js/woo-document-word-counter-admin.js:120
+#: admin/js/woo-document-word-counter-admin.js:121
 msgid "Price Per "
 msgstr "Preț per"
 
-#: admin/partials/woo-document-word-counter-admin-setting.php:27
-msgid "WooCommerce Price Per Word Settings"
-msgstr "WooCommerce Preț pe cuvânt Setări"
+#: admin/js/woo-document-word-counter-admin.js:52
+msgid "Price Per %s %s "
+msgstr "Preț per %s %s"
+
+#: admin/js/woo-document-word-counter-admin.js:48
+#: admin/js/woo-document-word-counter-admin.js:57
+msgid "Price Per %s Settings"
+msgstr "Preț pe %s Setări"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:226
+msgid "Process"
+msgstr "Proces"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:45
+msgid "Product Page Message"
+msgstr "Mesajul paginii produsului"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:168
+msgid "Product type..."
+msgstr "Tipul de produs..."
 
 #: admin/partials/woo-document-word-counter-admin-setting.php:30
 msgid "QTY Accessibility"
 msgstr "QTY Accesibilitate"
 
-#: admin/partials/woo-document-word-counter-admin-setting.php:31
-msgid "Allow buyers to enter a QTY instead of forcing a document upload."
-msgstr ""
-"Permiteți cumpărătorilor să introducă un QTY în loc să forțeze încărcarea "
-"unui document."
+#: admin/js/woo-document-word-counter-admin.js:31
+#: admin/js/woo-document-word-counter-admin.js:32
+#: admin/js/woo-document-word-counter-admin.js:61
+#: admin/js/woo-document-word-counter-admin.js:62
+#: admin/js/woo-document-word-counter-admin.js:76
+#: admin/js/woo-document-word-counter-admin.js:90
+#: admin/js/woo-document-word-counter-admin.js:91
+#: admin/js/woo-document-word-counter-admin.js:106
+#: admin/js/woo-document-word-counter-admin.js:107
+msgid "Regular Price "
+msgstr "Preț normal"
 
-#: admin/partials/woo-document-word-counter-admin-setting.php:38
-msgid "Minimum Price"
-msgstr "Preț minim"
+#: admin/partials/woo-document-word-counter-admin-setting.php:66
+msgid "Save changes"
+msgstr "Salvați modificările"
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:121
+msgid ""
+"Select from the options below to enable or disable Price per "
+"Words/Characters."
+msgstr ""
+"Selectați din opțiunile de mai jos pentru a activa sau dezactiva Prețul pe "
+"cuvinte/caractere."
+
+#: admin/class-woo-document-word-counter-admin.php:186
+msgid "Select your file(s)"
+msgstr "Selectați fișierul (fișierele) dvs"
 
 #: admin/partials/woo-document-word-counter-admin-setting.php:39
 msgid ""
@@ -84,158 +278,63 @@ msgstr ""
 "lucru poate fi, de asemenea, setat la nivel de produs, care ar anula această "
 "setare globală."
 
-#: admin/partials/woo-document-word-counter-admin-setting.php:45
-msgid "Product Page Message"
-msgstr "Mesajul paginii produsului"
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:105
-msgid "Action completed; %s records processed."
-msgstr "Acțiune finalizată; %s înregistrări procesate."
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:109
-msgid "Action completed; %s records processed. "
-msgstr "Acțiune finalizată; %s înregistrări procesate."
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:120
-msgid "Bulk Edit Tool for Enable or Disable the Price per Words/Characters"
-msgstr ""
-"Instrumentul de editare în masă pentru a activa sau dezactiva prețul pe "
-"cuvinte/caractere"
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:121
-msgid ""
-"Select from the options below to enable or disable Price per "
-"Words/Characters."
-msgstr ""
-"Selectați din opțiunile de mai jos pentru a activa sau dezactiva Prețul pe "
-"cuvinte/caractere."
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:125
-msgid "Action"
-msgstr "Acțiune"
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:129
-#: admin/partials/woo-document-word-counter-admin-setting.php:146
-#: admin/partials/woo-document-word-counter-admin-setting.php:164
-#: admin/partials/woo-document-word-counter-admin-setting.php:183
-#: admin/partials/woo-document-word-counter-admin-setting.php:201
-msgid "- Select option"
-msgstr "- Selectați opțiunea"
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:131
-msgid "Enable Price per Word"
-msgstr "Activați prețul pe cuvânt"
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:133
-msgid "Enable Price per Character"
-msgstr "Activați prețul per caracter"
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:135
-msgid "Disable Price per Word / Character"
-msgstr "Dezactivați Prețul pe cuvânt / caracter"
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:141
-msgid "Target"
-msgstr "Țintă"
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:148
-msgid "All products"
-msgstr "Toate produsele"
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:150
-msgid "Featured products"
-msgstr "Produse recomandate"
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:152
-msgid "Where..."
-msgstr "Unde..."
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:159
-msgid "Where"
-msgstr "Unde"
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:166
-msgid "Category..."
-msgstr "Categoria..."
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:168
-msgid "Product type..."
-msgstr "Tipul de produs..."
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:170
-msgid "Price greater than..."
-msgstr "Preț mai mare decât..."
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:172
-msgid "Price less than..."
-msgstr "Preț mai mic decât..."
-
-#: admin/partials/woo-document-word-counter-admin-setting.php:179
-msgid "Category"
-msgstr "Categoria"
+#: admin/partials/woo-document-word-counter-html-custom-tab.php:48
+msgid "Set Price Per Word OR Price Per Character"
+msgstr "Setați prețul pe cuvânt sau prețul pe caracter"
 
 #: admin/partials/woo-document-word-counter-admin-setting.php:203
 msgid "Simple"
 msgstr "Simplu"
 
+#: admin/partials/woo-document-word-counter-admin-setting.php:141
+msgid "Target"
+msgstr "Țintă"
+
+#: admin/class-woo-document-word-counter-admin.php:520
+msgid "Total Price:"
+msgstr "Preț total:"
+
 #: admin/partials/woo-document-word-counter-admin-setting.php:205
 msgid "Variable"
 msgstr "Variabilă"
 
-#: admin/partials/woo-document-word-counter-admin-setting.php:207
-msgid "Grouped"
-msgstr "Grupate"
+#: admin/partials/woo-document-word-counter-admin-setting.php:159
+msgid "Where"
+msgstr "Unde"
 
-#: admin/partials/woo-document-word-counter-admin-setting.php:209
-msgid "External"
-msgstr "Extern"
+#: admin/partials/woo-document-word-counter-admin-setting.php:152
+msgid "Where..."
+msgstr "Unde..."
 
-#: admin/partials/woo-document-word-counter-admin-setting.php:226
-msgid "Process"
-msgstr "Proces"
+#: admin/class-woo-document-word-counter-admin.php:530
+msgid "WooCommerce"
+msgstr "WooCommerce"
 
-#: admin/partials/woo-document-word-counter-html-custom-tab.php:48
-msgid "Set Price Per Word OR Price Per Character"
-msgstr "Setați prețul pe cuvânt sau prețul pe caracter"
+#: admin/class-woo-document-word-counter-admin.php:530
+msgid "WooCommerce Price Per Word Plugin requires the %s to work!"
+msgstr "WooCommerce Price Per Word Plugin necesită %s pentru a funcționa!"
 
-#: admin/partials/woo-document-word-counter-html-custom-tab.php:50
-msgid ""
-"Choose whether to set pricing based on the number of words in a document or "
-"the number of characters"
-msgstr ""
-"Alegeți dacă doriți să stabiliți prețurile în funcție de numărul de cuvinte "
-"dintr-un document sau de numărul de caractere"
+#: admin/partials/woo-document-word-counter-admin-setting.php:27
+msgid "WooCommerce Price Per Word Settings"
+msgstr "WooCommerce Preț pe cuvânt Setări"
 
-#: admin/partials/woo-document-word-counter-html-custom-tab.php:58
-msgid "Enable "
-msgstr "Activați"
+#. Plugin Name of the plugin
+msgid "WooDocument Word Counter"
+msgstr "WooDocument Word Counter"
 
-#: admin/partials/woo-document-word-counter-html-custom-tab.php:62
-msgid "Enable this option and then set a "
-msgstr "Activați această opțiune și apoi setați un"
+#: admin/js/woo-document-word-counter-admin.js:8
+#: admin/js/woo-document-word-counter-admin.js:12
+#: admin/js/woo-document-word-counter-admin.js:17
+#: admin/js/woo-document-word-counter-admin.js:41
+#: admin/js/woo-document-word-counter-admin.js:115
+msgid "Word "
+msgstr "Cuvânt"
 
-#: admin/partials/woo-document-word-counter-html-custom-tab.php:68
-msgid "Enter the maximum word limit to accept uploaded file words."
-msgstr ""
-"Introduceți limita maximă de cuvinte pentru a accepta cuvintele din fișierul "
-"încărcat."
+#: admin/js/woo-document-word-counter-admin.js:146
+#: admin/js/woo-document-word-counter-admin.js:211
+msgid "Words"
+msgstr "Cuvinte"
 
-#: admin/partials/woo-document-word-counter-html-custom-tab.php:86
-msgid "Enable price breaks?"
-msgstr "Activați reducerile de preț?"
-
-#: admin/partials/woo-document-word-counter-html-custom-tab.php:88
-msgid "Enable to set multiple prices for multiple levels."
-msgstr "Permiteți să setați mai multe prețuri pentru mai multe niveluri."
-
-#: admin/partials/woo-document-word-counter-html-custom-tab.php:94
-msgid "Min "
-msgstr "Min"
-
-#: admin/partials/woo-document-word-counter-html-custom-tab.php:95
-msgid "Max "
-msgstr "Max"
-
-#: admin/partials/woo-document-word-counter-html-custom-tab.php:96
-msgid "Price ("
-msgstr "Preț ("
+#. Author of the plugin
+msgid "Xplication by Iftodi Petru"
+msgstr "Xplication de Iftodi Petru"

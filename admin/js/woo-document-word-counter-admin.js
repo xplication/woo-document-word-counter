@@ -1,33 +1,35 @@
 jQuery(function ($) {
     'use strict';
     $(function () {
-
+        const { __, _x, _n, sprintf } = wp.i18n;
+        const domain = 'woo-document-word-counter';
+        
         if (typeof (woocommerce_price_per_word_params.aewcppw_word_character) != "undefined" && woocommerce_price_per_word_params.aewcppw_word_character !== null && woocommerce_price_per_word_params.aewcppw_word_character == 'word') {
-            var wppw_product_type = 'Word ';
+            var wppw_product_type = __('Word ', 'woo-document-word-counter');
         } else if (typeof (woocommerce_price_per_word_params.aewcppw_word_character) != "undefined" && woocommerce_price_per_word_params.aewcppw_word_character !== null && woocommerce_price_per_word_params.aewcppw_word_character == 'character') {
-            var wppw_product_type = 'Character ';
+            var wppw_product_type = __('Character ', 'woo-document-word-counter');
         } else {
-            var wppw_product_type = 'Word ';
+            var wppw_product_type = __('Word ', 'woo-document-word-counter');
         }
 
         $('#_price_per_word_character_enable').change(function () {
             if ($('input[name="_price_per_word_character"][value="word"]').is(":checked")) {
-                var wppw_product_type = 'Word ';
+                var wppw_product_type = __('Word ', 'woo-document-word-counter');
             }
             else {
-                var wppw_product_type = 'Character ';
+                var wppw_product_type = __('Character ', 'woo-document-word-counter');
             }
             if ($(this).is(':checked')) {
-                $("label[for='_regular_price']").text('Price Per ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
-                $(".variable_pricing p.form-row-first label").text('Price Per ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                $("label[for='_regular_price']").text( __('Price Per ', 'woo-document-word-counter') + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                $(".variable_pricing p.form-row-first label").text( __('Price Per ', 'woo-document-word-counter') + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
                 $(".custom_tab_woocommerce_price_word_character_tab").removeClass("custom_tab_woocommerce_price_word_character_tab_hidden");
                 if ($(".custom_tab_woocommerce_price_word_character_tab ").hasClass("active")) {
                     $("#custom_tab_data_woocommerce_price_word_character_tab").show();
                 }
             } else {
                 var wppw_product_type = '';
-                $("label[for='_regular_price']").text('Regular Price ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
-                $(".variable_pricing p.form-row-first label").text('Regular Price ' + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                $("label[for='_regular_price']").text( __('Regular Price ', 'woo-document-word-counter') + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                $(".variable_pricing p.form-row-first label").text( __('Regular Price ', 'woo-document-word-counter') + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
                 $(".word_count_cap").hide();
                 $(".custom_tab_woocommerce_price_word_character_tab").addClass("custom_tab_woocommerce_price_word_character_tab_hidden");
                 $("#custom_tab_data_woocommerce_price_word_character_tab").hide();
@@ -36,42 +38,42 @@ jQuery(function ($) {
 
         $('input[name="_price_per_word_character"]').click(function () {
             if ($(this).val() == 'word') {
-                var wppw_product_type = 'Word ';
-                $("label[for='_regular_price']").text('Price Per ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
-                $(".variable_pricing p.form-row-first label").text('Price Per ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
-                $("label[for='_word_count_cap_status']").text('Enable ' + wppw_product_type.toLowerCase() + 'count cap?');
-                $("label[for='_word_count_cap_word_limit']").text(wppw_product_type + 'limit');
-                $("#price-breaks-list .min-title-head").text("Min Words");
-                $("#price-breaks-list .max-title-head").text("Max Words");
-                $("#custom_tab_woocommerce_price_word_character_tab a").html("Price Per " + wppw_product_type + " Settings");
+                var wppw_product_type = __('Word ', 'woo-document-word-counter');
+                $("label[for='_regular_price']").text( __('Price Per ', 'woo-document-word-counter') + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                $(".variable_pricing p.form-row-first label").text( __('Price Per ', 'woo-document-word-counter') + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                $("label[for='_word_count_cap_status']").text( sprintf( __('Enable %s count cap?', 'woo-document-word-counter'), wppw_product_type.toLowerCase() ) );
+                $("label[for='_word_count_cap_word_limit']").text( sprintf( __( '%s limit'), wppw_product_type ) );
+                $("#price-breaks-list .min-title-head").text( __("Min Words", 'woo-document-word-counter') );
+                $("#price-breaks-list .max-title-head").text( __("Max Words", 'woo-document-word-counter') );
+                $("#custom_tab_woocommerce_price_word_character_tab a").html(wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js + sprintf( __("Price Per %s Settings", 'woo-document-word-counter'), wppw_product_type ) );
             } else if ($(this).val() == 'character') {
                 var wppw_product_type = 'Character ';
                 $("label[for='_regular_price']").text('Price Per ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
-                $(".variable_pricing p.form-row-first label").text('Price Per ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
-                $("label[for='_word_count_cap_status']").text('Enable ' + wppw_product_type.toLowerCase() + 'count cap?');
-                $("label[for='_word_count_cap_word_limit']").text(wppw_product_type + 'limit');
-                $("#price-breaks-list .min-title-head").text("Min Characters");
-                $("#price-breaks-list .max-title-head").text("Max Characters");
-                $("#custom_tab_woocommerce_price_word_character_tab a").html("Price Per " + wppw_product_type + " Settings");
+                $(".variable_pricing p.form-row-first label").text( sprintf( __( 'Price Per %s %s ', 'woo-document-word-counter' ), wppw_product_type, woocommerce_price_per_word_params.woocommerce_currency_symbol_js ) );
+                $("label[for='_word_count_cap_status']").text( sprintf( __( 'Enable %s count cap?', 'woo-document-word-counter' ), wppw_product_type.toLowerCase() ) );
+                $("label[for='_word_count_cap_word_limit']").text( sprintf( __('%s limit', 'woo-document-word-counter'), wppw_product_type) );
+                $("#price-breaks-list .min-title-head").text( __('Min Characters', 'woo-document-word-counter') );
+                $("#price-breaks-list .max-title-head").text( __('Max Characters', 'woo-document-word-counter') );
+                $("#custom_tab_woocommerce_price_word_character_tab a").html( sprintf( __('Price Per %s Settings', 'woo-document-word-counter' ), wppw_product_type ) );
             }
             else {
                 var wppw_product_type = ' ';
-                $("label[for='_regular_price']").text('Regular Price ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
-                $(".variable_pricing p.form-row-first label").text('Regular Price ' + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
-                $("#price-breaks-list .min-title-head").text("Min Words");
-                $("#price-breaks-list .max-title-head").text("Max Words");
+                $("label[for='_regular_price']").text(__('Regular Price ', 'woo-document-word-counter') + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                $(".variable_pricing p.form-row-first label").text( __('Regular Price ', 'woo-document-word-counter') + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                $("#price-breaks-list .min-title-head").text( __('Min Words', 'woo-document-word-counter') );
+                $("#price-breaks-list .max-title-head").text( __('Max Words', 'woo-document-word-counter') );
             }
         });
 
         $('.variations_tab a, .woocommerce_variation').click(function () {
             if ($('#_price_per_word_character_enable').is(':checked')) {
                 setTimeout(function () {
-                    $(".variable_pricing p.form-row-first label").text('Price Per ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                    $(".variable_pricing p.form-row-first label").text( __('Price Per ', 'woo-document-word-counter') + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
                 }, 5000);
 
             } else {
                 setTimeout(function () {
-                    $(".variable_pricing p.form-row-first label").text('Regular Price ' + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                    $(".variable_pricing p.form-row-first label").text( __('Regular Price ', 'woo-document-word-counter') + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
                 }, 5000);
             }
         });
@@ -79,14 +81,14 @@ jQuery(function ($) {
         $(document).on('change', '#variable_product_options', function () {
             if ($('#_price_per_word_character_enable').is(':checked')) {
                 setTimeout(function () {
-                    $("label[for='_regular_price']").text('Price Per ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
-                    $(".variable_pricing p.form-row-first label").text('Price Per ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                    $("label[for='_regular_price']").text( __('Price Per ', 'woo-document-word-counter') + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                    $(".variable_pricing p.form-row-first label").text( __('Price Per ', 'woo-document-word-counter') + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
                 }, 10000);
 
             } else {
                 setTimeout(function () {
-                    $("label[for='_regular_price']").text('Regular Price ' + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
-                    $(".variable_pricing p.form-row-first label").text('Regular Price ' + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                    $("label[for='_regular_price']").text( __('Regular Price ', 'woo-document-word-counter') + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                    $(".variable_pricing p.form-row-first label").text( __('Regular Price ', 'woo-document-word-counter') + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
                 }, 10000);
             }
         });
@@ -95,14 +97,14 @@ jQuery(function ($) {
         $("#product-type, #variable_product_options .woocommerce_variations").change(function () {
             if ($('#_price_per_word_character_enable').is(':checked')) {
                 setTimeout(function () {
-                    $("label[for='_regular_price']").text('Price Per ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
-                    $(".variable_pricing p.form-row-first label").text('Price Per ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                    $("label[for='_regular_price']").text( __('Price Per ', 'woo-document-word-counter') + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                    $(".variable_pricing p.form-row-first label").text( __('Price Per ', 'woo-document-word-counter') + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
                 }, 5000);
 
             } else {
                 setTimeout(function () {
-                    $("label[for='_regular_price']").text('Regular Price ' + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
-                    $(".variable_pricing p.form-row-first label").text('Regular Price ' + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                    $("label[for='_regular_price']").text( __('Regular Price ', 'woo-document-word-counter') + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                    $(".variable_pricing p.form-row-first label").text( __('Regular Price ', 'woo-document-word-counter') + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
                 }, 5000);
             }
         });
@@ -110,18 +112,18 @@ jQuery(function ($) {
         if ($('#_price_per_word_character_enable').is(':checked')) {
             setTimeout(function () {
                 if ($('input[name="_price_per_word_character"][value="word"]').is(":checked")) {
-                    var wppw_product_type = 'Word ';
+                    var wppw_product_type = __('Word ', 'woo-document-word-counter');
                 }
                 else {
-                    var wppw_product_type = 'Character ';
+                    var wppw_product_type = __('Character ', 'woo-document-word-counter');
                 }
-                $("label[for='_regular_price']").text('Price Per ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
-                $(".variable_pricing p.form-row-first label").text('Price Per ' + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                $("label[for='_regular_price']").text( __('Price Per ', 'woo-document-word-counter') + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                $(".variable_pricing p.form-row-first label").text( __('Price Per ', 'woo-document-word-counter') + wppw_product_type + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
             }, 5000);
 
         } else {
             setTimeout(function () {
-                $("label[for='_regular_price']").text('Regular Price ' + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
+                $("label[for='_regular_price']").text( __('Regular Price ', 'woo-doucument-word-counter') + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
                 $(".variable_pricing p.form-row-first label").text('Regular Price ' + woocommerce_price_per_word_params.woocommerce_currency_symbol_js);
             }, 3000);
         }
@@ -141,10 +143,10 @@ jQuery(function ($) {
         var $last_max_field = $("input[name='price-breaks-max[]']").last().val();
         if ($last_max_field == ">") {
             if ($('input[name="_price_per_word_character"][value="word"]').is(":checked")) {
-                var wppw_product_type = 'Words';
+                var wppw_product_type = __('Words', 'woo-document-word-counter');
             }
             else {
-                var wppw_product_type = 'Characters';
+                var wppw_product_type = __('Characters', 'woo-document-word-counter');
             }
             alert("The Max " + wppw_product_type + " field for the last row must be greater than 0 to add an additional row.");
             return false;
@@ -206,10 +208,10 @@ jQuery(function ($) {
 
     $(document).on("blur", "input[name='price-breaks-max[]']", function () {
         if ($('input[name="_price_per_word_character"][value="word"]').is(":checked")) {
-            var wppw_product_type = 'Words';
+            var wppw_product_type = __('Words', 'woo-document-word-counter');
         }
         else {
-            var wppw_product_type = 'Characters';
+            var wppw_product_type = __('Characters', 'woo-document-word-counter');
         }
         var $min_element = $("input[name='price-breaks-min[]']");
         var $max_element = $("input[name='price-breaks-max[]']");

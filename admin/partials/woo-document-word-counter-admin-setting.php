@@ -63,7 +63,7 @@ class Woocommerce_Price_Per_Word_Setting {
             <?php $Html_output->init($wppw_setting_fields); ?>
             <p class="submit">
                 <input type="submit" name="woocommerce_price_per_word_integration" class="button-primary"
-                       value="<?php esc_attr_e('Save changes', 'Option'); ?>"/>
+                       value="<?php esc_attr_e('Save changes', 'woo-document-word-counter'); ?>"/>
             </p>
         </form>
         <?php

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-04-30T15:53:40+00:00\n"
+"POT-Creation-Date: 2024-05-01T18:21:56+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.9.0\n"
 "X-Domain: woo-document-word-counter\n"
@@ -34,15 +34,38 @@ msgstr ""
 msgid "https://xplication.com/"
 msgstr ""
 
-#: admin/class-woo-document-word-counter-admin.php:528
+#: admin/class-woo-document-word-counter-admin.php:186
+msgid "Select your file(s)"
+msgstr ""
+
+#: admin/class-woo-document-word-counter-admin.php:220
+msgid "Price Per"
+msgstr ""
+
+#: admin/class-woo-document-word-counter-admin.php:520
+msgid "Total Price:"
+msgstr ""
+
+#: admin/class-woo-document-word-counter-admin.php:530
 msgid "WooCommerce Price Per Word Plugin requires the %s to work!"
 msgstr ""
 
-#: admin/class-woo-document-word-counter-admin.php:528
+#: admin/class-woo-document-word-counter-admin.php:530
 msgid "WooCommerce"
 msgstr ""
 
 #: admin/partials/woo-document-word-counter-admin-display.php:72
+#: admin/js/woo-document-word-counter-admin.js:23
+#: admin/js/woo-document-word-counter-admin.js:24
+#: admin/js/woo-document-word-counter-admin.js:42
+#: admin/js/woo-document-word-counter-admin.js:43
+#: admin/js/woo-document-word-counter-admin.js:71
+#: admin/js/woo-document-word-counter-admin.js:84
+#: admin/js/woo-document-word-counter-admin.js:85
+#: admin/js/woo-document-word-counter-admin.js:100
+#: admin/js/woo-document-word-counter-admin.js:101
+#: admin/js/woo-document-word-counter-admin.js:120
+#: admin/js/woo-document-word-counter-admin.js:121
 msgid "Price Per "
 msgstr ""
 
@@ -68,6 +91,10 @@ msgstr ""
 
 #: admin/partials/woo-document-word-counter-admin-setting.php:45
 msgid "Product Page Message"
+msgstr ""
+
+#: admin/partials/woo-document-word-counter-admin-setting.php:66
+msgid "Save changes"
 msgstr ""
 
 #: admin/partials/woo-document-word-counter-admin-setting.php:105
@@ -208,4 +235,76 @@ msgstr ""
 
 #: admin/partials/woo-document-word-counter-html-custom-tab.php:96
 msgid "Price ("
+msgstr ""
+
+#: admin/js/woo-document-word-counter-admin.js:8
+#: admin/js/woo-document-word-counter-admin.js:12
+#: admin/js/woo-document-word-counter-admin.js:17
+#: admin/js/woo-document-word-counter-admin.js:41
+#: admin/js/woo-document-word-counter-admin.js:115
+msgid "Word "
+msgstr ""
+
+#: admin/js/woo-document-word-counter-admin.js:10
+#: admin/js/woo-document-word-counter-admin.js:20
+#: admin/js/woo-document-word-counter-admin.js:118
+msgid "Character "
+msgstr ""
+
+#: admin/js/woo-document-word-counter-admin.js:31
+#: admin/js/woo-document-word-counter-admin.js:32
+#: admin/js/woo-document-word-counter-admin.js:61
+#: admin/js/woo-document-word-counter-admin.js:62
+#: admin/js/woo-document-word-counter-admin.js:76
+#: admin/js/woo-document-word-counter-admin.js:90
+#: admin/js/woo-document-word-counter-admin.js:91
+#: admin/js/woo-document-word-counter-admin.js:106
+#: admin/js/woo-document-word-counter-admin.js:107
+msgid "Regular Price "
+msgstr ""
+
+#: admin/js/woo-document-word-counter-admin.js:44
+#: admin/js/woo-document-word-counter-admin.js:53
+msgid "Enable %s count cap?"
+msgstr ""
+
+#: admin/js/woo-document-word-counter-admin.js:46
+#: admin/js/woo-document-word-counter-admin.js:63
+msgid "Min Words"
+msgstr ""
+
+#: admin/js/woo-document-word-counter-admin.js:47
+#: admin/js/woo-document-word-counter-admin.js:64
+msgid "Max Words"
+msgstr ""
+
+#: admin/js/woo-document-word-counter-admin.js:48
+#: admin/js/woo-document-word-counter-admin.js:57
+msgid "Price Per %s Settings"
+msgstr ""
+
+#: admin/js/woo-document-word-counter-admin.js:52
+msgid "Price Per %s %s "
+msgstr ""
+
+#: admin/js/woo-document-word-counter-admin.js:54
+msgid "%s limit"
+msgstr ""
+
+#: admin/js/woo-document-word-counter-admin.js:55
+msgid "Min Characters"
+msgstr ""
+
+#: admin/js/woo-document-word-counter-admin.js:56
+msgid "Max Characters"
+msgstr ""
+
+#: admin/js/woo-document-word-counter-admin.js:146
+#: admin/js/woo-document-word-counter-admin.js:211
+msgid "Words"
+msgstr ""
+
+#: admin/js/woo-document-word-counter-admin.js:149
+#: admin/js/woo-document-word-counter-admin.js:214
+msgid "Characters"
 msgstr ""
