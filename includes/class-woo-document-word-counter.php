@@ -4,7 +4,7 @@
  * @since      1.0.0
  * @package    Woocommerce_Price_Per_Word
  * @subpackage Woocommerce_Price_Per_Word/includes
- * @author     Angell EYE <service@angelleye.com>
+ * @author     Iftodi Petru<petru.iftodi@xplication.ro>
  */
 class Woocommerce_Price_Per_Word {
 
@@ -63,8 +63,8 @@ class Woocommerce_Price_Per_Word {
      *
      * - Woocommerce_Price_Per_Word_Loader. Orchestrates the hooks of the plugin.
      * - Woocommerce_Price_Per_Word_i18n. Defines internationalization functionality.
-     * - Woocommerce_Price_Per_Word_Admin. Defines all hooks for the admin area.
-     * - Woocommerce_Price_Per_Word_Public. Defines all hooks for the public side of the site.
+     * - WooDocument_Word_Counter_Admin. Defines all hooks for the admin area.
+     * - WooDocument_Word_Counter_Public. Defines all hooks for the public side of the site.
      *
      * Create an instance of the loader which will be used to register the hooks
      * with WordPress.
@@ -127,7 +127,7 @@ class Woocommerce_Price_Per_Word {
      */
     private function define_admin_hooks() {
 
-        $plugin_admin = new Woocommerce_Price_Per_Word_Admin($this->get_plugin_name(), $this->get_version());
+        $plugin_admin = new WooDocument_Word_Counter_Admin($this->get_plugin_name(), $this->get_version());
 
         if (function_exists('WC')) {
             $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
@@ -175,7 +175,7 @@ class Woocommerce_Price_Per_Word {
      */
     private function define_public_hooks() {
 
-        $plugin_public = new Woocommerce_Price_Per_Word_Public($this->get_plugin_name(), $this->get_version());
+        $plugin_public = new WooDocument_Word_Counter_Public($this->get_plugin_name(), $this->get_version());
 
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');

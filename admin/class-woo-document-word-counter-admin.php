@@ -3,9 +3,9 @@
 /**
  * @package    Woocommerce_Price_Per_Word
  * @subpackage Woocommerce_Price_Per_Word/admin
- * @author     Angell EYE <service@angelleye.com>
+ * @author     Iftodi Petru<petru.iftodi@xplication.ro>
  */
-class Woocommerce_Price_Per_Word_Admin {
+class WooDocument_Word_Counter_Admin {
 
     /**
      * The ID of this plugin.
@@ -177,7 +177,7 @@ class Woocommerce_Price_Per_Word_Admin {
             $display_or_hide_ppw_file_upload_div = (isset($_SESSION['attach_id']) && !empty($_SESSION['attach_id']) && isset($_SESSION['product_id']) && isset($product->id) && $_SESSION['product_id'] == $product->id) ? 'style="display: none"' : 'a';
             $aewcppw_product_page_message = get_option('aewcppw_product_page_message');
             if (empty($aewcppw_product_page_message)) {
-                $aewcppw_product_page_message = 'Please upload your .doc, .docx, .pdf or .txt to get a price.';
+                $aewcppw_product_page_message = __('Please upload your .doc, .docx, .pdf or .txt to get a price.', 'woo-document-word-counter');
             }
             ?>
             <span
@@ -187,7 +187,7 @@ class Woocommerce_Price_Per_Word_Admin {
                 <input style="display:none;" type="file" name="ppw_file_upload" value="Add File" id="ppw_file_upload_id">
             </div>
             <div id="ppw_loader" style="display: none;">
-                <div class="ppw-spinner-loader">Loading...</div>
+                <div class="ppw-spinner-loader"><?= __('Loading...', 'woo-document-word-counter') ?></div>
             </div>
             <div id="ppw_file_container" class="woocommerce-message" <?php echo $display_or_hide_ppw_file_container; ?>>
                 <?php
@@ -207,9 +207,9 @@ class Woocommerce_Price_Per_Word_Admin {
         global $product;
         $wppw_get_product_type = $this->wppw_get_product_type();
         if ($wppw_get_product_type == 'word') {
-            $type = "Word";
+            $type = __("Word", "woo-document-word-counter");
         } else {
-            $type = "Character";
+            $type = __("Character", "woo-document-word-counter");
         }
         if ($this->is_enable_price_per_word()) {
             if (is_numeric($product->price)) {
@@ -227,7 +227,7 @@ class Woocommerce_Price_Per_Word_Admin {
     public function ppw_file_upload_action() {
         add_filter('upload_dir', array($this, 'woocommerce_price_per_word_upload_dir'), 10, 1);
         $product_id = sanitize_text_field($_POST['product_id']);
-        $return_messge = array('total_word' => '', 'total_character' => '', 'aewcppw_word_character' => $this->wppw_get_product_type_by_product_id($product_id), 'message' => 'File successfully uploaded', 'url' => '', 'message_content' => '', 'product_price' => '', 'product_id' => $this->wppw_get_product_id());
+        $return_messge = array('total_word' => '', 'total_character' => '', 'aewcppw_word_character' => $this->wppw_get_product_type_by_product_id($product_id), 'message' => __('File successfully uploaded', 'woo-document-word-counter'), 'url' => '', 'message_content' => '', 'product_price' => '', 'product_id' => $this->wppw_get_product_id());
         if (isset($_POST['security']) && !empty($_POST['security'])) {
             if (wp_verify_nonce($_POST['security'], 'woocommerce_price_per_word_params_nonce')) {
                 if (!function_exists('wp_handle_upload')) {
@@ -256,10 +256,10 @@ class Woocommerce_Price_Per_Word_Admin {
                                     $limit_of_word_or_character = $total_characters;
                                 }
                                 if ($limit_of_word_or_character > $word_count_cap_word_limit) {
-                                    $return_messge = array('total_word' => '', 'message' => 'Your file contains more ' . $product_type . 's than word cap limit. Maximum ' . $product_type . 's limit is ' . $word_count_cap_word_limit, 'url' => '');
+                                    $return_messge = array('total_word' => '', 'message' => sprintf(__('Your file contains more %s than word cap limit. Maximum %s limit is %s', 'woo-document-word-counter' ), $product_type, $product_type, $word_count_cap_word_limit ), 'url' => '');
                                     $return_messge['total_word'] = $total_words;
                                     $return_messge['total_character'] = $total_characters;
-                                    $return_messge['message_content'] = 'The file upload failed, Please choose a file having less ' . $product_type . 's than limit one.';
+                                    $return_messge['message_content'] = sprintf( __('The file upload failed, Please choose a file having less %s than limit one.', 'woo-document-word-counter'), $product_type);
                                     @unlink($movefile['file']);
                                     echo json_encode($return_messge, true);
                                     exit();
@@ -277,12 +277,12 @@ class Woocommerce_Price_Per_Word_Admin {
                             $_SESSION['product_price'] = $return_messge['product_price'];
                             $_SESSION['product_id'] = $product_id;
                             $_SESSION['file_name'] = '<a href="' . esc_url($attachment_page) . '" target="_blank">' . esc_html($fileArray['basename']) . '</a>';
-                            $return_messge['message_content'] = '<a id="ppw_remove_file" data_file="' . $attach_id . '" class="button wc-forward" title="' . esc_attr__('Remove file', 'woocommerce') . '" href="#">' . "Delete" . '</a>File successfully uploaded';
+                            $return_messge['message_content'] = '<a id="ppw_remove_file" data_file="' . $attach_id . '" class="button wc-forward" title="' . esc_attr__('Remove file', 'woocommerce') . '" href="#">' . "Delete" . '</a>'. __('File successfully uploaded', 'woo-document-word-counter');
 
                             echo json_encode($return_messge, true);
                         } else {
-                            $return_messge = array('total_word' => '', 'message' => 'Your pdf file is secured or empty.', 'url' => '');
-                            $return_messge['message_content'] = 'The file upload failed, Please choose a valid file extension and try again.';
+                            $return_messge = array('total_word' => '', 'message' => __('Your pdf file is secured or empty.', 'woo-document-word-counter'), 'url' => '');
+                            $return_messge['message_content'] = __('The file upload failed, Please choose a valid file extension and try again.', 'woo-document-word-counter');
                             echo json_encode($return_messge, true);
                         }
                     } elseif ($file_ext == 'txt') {
@@ -300,10 +300,10 @@ class Woocommerce_Price_Per_Word_Admin {
                                 $limit_of_word_or_character = $total_characters;
                             }
                             if ($limit_of_word_or_character > $word_count_cap_word_limit) {
-                                $return_messge = array('total_word' => '', 'message' => 'Your file contains more ' . $product_type . 's than word cap limit. Maximum ' . $product_type . 's limit is ' . $word_count_cap_word_limit, 'url' => '');
+                                $return_messge = array('total_word' => '', 'message' => sprintf( __('Your file contains more %s than word cap limit. Maximum %s limit is %s', 'woo-document-word-counter'), $product_type, $product_type, $word_count_cap_word_limit ), 'url' => '');
                                 $return_messge['total_word'] = $total_words;
                                 $return_messge['total_character'] = $total_characters;
-                                $return_messge['message_content'] = 'The file upload failed, Please choose a file having less ' . $product_type . 's than limit one.';
+                                $return_messge['message_content'] = sprintf(__('The file upload failed, Please choose a file having less %s than limit one.', 'woo-document-word-counter' ), $product_type);
                                 @unlink($movefile['file']);
                                 echo json_encode($return_messge, true);
                                 exit();
@@ -321,10 +321,10 @@ class Woocommerce_Price_Per_Word_Admin {
                         $_SESSION['product_price'] = $return_messge['product_price'];
                         $_SESSION['product_id'] = $product_id;
                         $_SESSION['file_name'] = '<a href="' . esc_url($attachment_page) . '" target="_blank">' . esc_html($fileArray['basename']) . '</a>';
-                        $return_messge['message_content'] = '<a id="ppw_remove_file" data_file="' . $attach_id . '" class="button wc-forward" title="' . esc_attr__('Remove file', 'woocommerce') . '" href="#">' . "Delete" . '</a>File successfully uploaded';
+                        $return_messge['message_content'] = '<a id="ppw_remove_file" data_file="' . $attach_id . '" class="button wc-forward" title="' . esc_attr__('Remove file', 'woocommerce') . '" href="#">' . __("Delete", "woo-document-word-counter") . '</a>'. __('File successfully uploaded', 'woo-document-word-counter');
                         echo json_encode($return_messge, true);
                     } else {
-                        $return_messge = array('total_word' => '', 'message' => 'The file upload failed, Please choose a valid file extension and try again.', 'url' => '');
+                        $return_messge = array('total_word' => '', 'message' => __('The file upload failed, Please choose a valid file extension and try again.', 'woo-document-word-counter'), 'url' => '');
                         echo json_encode($return_messge, true);
                     }
                     exit();
@@ -334,12 +334,12 @@ class Woocommerce_Price_Per_Word_Admin {
                     exit();
                 }
             } else {
-                $return_messge = array('total_word' => '', 'message' => 'security problem, wordpress nonce is not verified', 'url' => '');
+                $return_messge = array('total_word' => '', 'message' => __('security problem, wordpress nonce is not verified', 'woo-document-word-counter'), 'url' => '');
                 echo json_encode($return_messge, true);
                 exit();
             }
         } else {
-            $return_messge = array('total_word' => '', 'message' => 'security problem, wordpress nonce is not verified', 'url' => '');
+            $return_messge = array('total_word' => '', 'message' => __('security problem, wordpress nonce is not verified', 'woo-document-word-counter'), 'url' => '');
             echo json_encode($return_messge, true);
             exit();
         }
@@ -459,18 +459,18 @@ class Woocommerce_Price_Per_Word_Admin {
             $return_string = wc_price($values["data"]->price, array("decimals" => $decimals));
             if (isset($values['ppw_custom_cart_data']['file_name']) && !empty($values['ppw_custom_cart_data']['file_name'])) {
 
-                $return_string .= '<div><span><b>File Name: </b></span>';
-                $return_string .= "<span>" . $values['ppw_custom_cart_data']['file_name'] . "</span></div>";
+                $return_string .= '<div><span><b>'. __('File Name: ','woo-document-word-counter'). '</b></span>';
+                $return_string .= "<span class='ppw_custom_cart_data'>" . $values['ppw_custom_cart_data']['file_name'] . "</span></div>";
             }
             $wppw_get_product_type = $this->wppw_get_product_type_by_product_id($values['product_id']);
             if ($wppw_get_product_type == 'word') {
                 if (isset($values['ppw_custom_cart_data']['total_words']) && !empty($values['ppw_custom_cart_data']['total_words'])) {
-                    $return_string .= '<div><span><b>Total word: </b></span>';
+                    $return_string .= '<div><span><b>'. __('Total word: ', 'woo-document-word-counter'). '</b></span>';
                     $return_string .= "<span>" . $values['ppw_custom_cart_data']['total_words'] . "</span></div>";
                 }
             } else {
                 if (isset($values['ppw_custom_cart_data']['total_characters']) && !empty($values['ppw_custom_cart_data']['total_characters'])) {
-                    $return_string .= '<div><span><b>Total character: </b></span>';
+                    $return_string .= '<div><span><b>'. __('Total character: ', 'woo-document-word-counter') .'</b></span>';
                     $return_string .= "<span>" . $values['ppw_custom_cart_data']['total_characters'] . "</span></div>";
                 }
             }
@@ -569,9 +569,10 @@ class Woocommerce_Price_Per_Word_Admin {
         ?>
         <div>
             <p class="form-row form-row-first">
-                <label><?php _e('Minimum Price', 'min-max-quantities-for-woocommerce'); ?>
+                <label><?php _e('Minimum Price', 'woo-document-word-counter'); ?>
                     <input type="number" size="5" name="_minimum_product_price[<?php echo $loop; ?>]"
-                           value="<?php if ($_minimum_product_price) echo esc_attr($_minimum_product_price); ?>"/></label>
+                        value="<?php if ($_minimum_product_price) echo esc_attr($_minimum_product_price); ?>"/>
+                </label>
             </p>
         </div>
         <?php

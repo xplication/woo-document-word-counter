@@ -3,7 +3,7 @@
 /**
  * @package    Woocommerce_Price_Per_Word
  * @subpackage Woocommerce_Price_Per_Word/includes
- * @author     Angell EYE <service@angelleye.com>
+ * @author     Iftodi Petru<petru.iftodi@xplication.ro>
  */
 class Woocommerce_Price_Per_Word_Loader {
 

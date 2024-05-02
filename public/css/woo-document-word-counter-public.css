@@ -70,3 +70,10 @@
   overflow: hidden;
   text-indent: 100%;
 }
+.ppw_custom_cart_data a {
+  display: block;
+  max-width: 130px;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @class       Woocommerce_Price_Per_Word_Setting
+ * @class       WooDocument_Word_Counter_Admin_Setting
  * @version    1.0
  * @package    woo-document-word-counter
  * @category    Class
- * @author      Angell EYE <service@angelleye.com>
+ * @author      Iftodi Petru <petru.iftodi@xplication.ro>
  */
-class Woocommerce_Price_Per_Word_Setting {
+class WooDocument_Word_Counter_Admin_Setting {
 
     /**
      * Hook in methods
@@ -57,7 +57,7 @@ class Woocommerce_Price_Per_Word_Setting {
 
     public static function woocommerce_price_per_word_general_setting() {
         $wppw_setting_fields = self::woocommerce_price_per_word_general_setting_fields();
-        $Html_output = new Woocommerce_Price_Per_Word_Html_output();
+        $Html_output = new WooDocument_Word_Counter_HTML();
         ?>
         <form id="woocommerce_price_per_word_form" enctype="multipart/form-data" action="" method="post">
             <?php $Html_output->init($wppw_setting_fields); ?>
@@ -72,7 +72,7 @@ class Woocommerce_Price_Per_Word_Setting {
 
     public static function woocommerce_price_per_word_general_setting_save_field() {
         $wppw_setting_fields = self::woocommerce_price_per_word_general_setting_fields();
-        $Html_output = new Woocommerce_Price_Per_Word_Html_output();
+        $Html_output = new WooDocument_Word_Counter_HTML();
         $Html_output->save_fields($wppw_setting_fields);
     }
 
@@ -236,4 +236,4 @@ class Woocommerce_Price_Per_Word_Setting {
 
 }
 
-Woocommerce_Price_Per_Word_Setting::init();
+WooDocument_Word_Counter_Admin_Setting::init();

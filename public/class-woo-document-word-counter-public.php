@@ -3,9 +3,9 @@
 /**
  * @package    Woocommerce_Price_Per_Word
  * @subpackage Woocommerce_Price_Per_Word/public
- * @author     Angell EYE <service@angelleye.com>
+ * @author     Iftodi Petru<petru.iftodi@xplication.ro>
  */
-class Woocommerce_Price_Per_Word_Public {
+class WooDocument_Word_Counter_Public {
 
     /**
      * The ID of this plugin.

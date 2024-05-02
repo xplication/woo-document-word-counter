@@ -3,9 +3,9 @@
 /**
  * @package    Woocommerce_Price_Per_Word
  * @subpackage Woocommerce_Price_Per_Word/admin
- * @author     Angell EYE <service@angelleye.com>
+ * @author     Iftodi Petru<petru.iftodi@xplication.ro>
  */
-class Woocommerce_Price_Per_Word_Html_Custom_tab {
+class WooDocument_Word_Counter_Tab {
 
     /**
      * Hook in methods
@@ -158,4 +158,4 @@ class Woocommerce_Price_Per_Word_Html_Custom_tab {
     }
 }
 
-Woocommerce_Price_Per_Word_Html_Custom_tab::init();
+WooDocument_Word_Counter_Tab::init();

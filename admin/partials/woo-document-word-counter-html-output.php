@@ -1,7 +1,7 @@
 <?php
 
 
-class Woocommerce_Price_Per_Word_Html_output {
+class WooDocument_Word_Counter_HTML {
 
     public static function init($options = array()) {
         if (!empty($options)) {
@@ -374,7 +374,7 @@ class Woocommerce_Price_Per_Word_Html_output {
     }
 }
 
-Woocommerce_Price_Per_Word_Html_output::init();
+WooDocument_Word_Counter_HTML::init();
 
 
 

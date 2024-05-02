@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2024-04-30T15:53:40+00:00\n"
-"PO-Revision-Date: 2024-05-02 07:11+0000\n"
+"PO-Revision-Date: 2024-05-02 06:30+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: woo-document-word-counter\n"
 "Language: ro_RO\n"
@@ -77,7 +77,7 @@ msgstr "Categoria..."
 
 #: admin/class-woo-document-word-counter-admin.php:212
 msgid "Character"
-msgstr "Caracter"
+msgstr ""
 
 #: admin/js/woo-document-word-counter-admin.js:10
 #: admin/js/woo-document-word-counter-admin.js:20
@@ -98,10 +98,6 @@ msgid ""
 msgstr ""
 "Alegeți dacă doriți să stabiliți prețurile în funcție de numărul de cuvinte "
 "dintr-un document sau de numărul de caractere"
-
-#: admin/class-woo-document-word-counter-admin.php:324
-msgid "Delete"
-msgstr "Șterge"
 
 #: admin/partials/woo-document-word-counter-admin-setting.php:135
 msgid "Disable Price per Word / Character"
@@ -150,15 +146,9 @@ msgstr "Extern"
 msgid "Featured products"
 msgstr "Produse recomandate"
 
-#: admin/class-woo-document-word-counter-admin.php:462
-msgid "File Name: "
-msgstr "Fișier: "
-
 #: admin/class-woo-document-word-counter-admin.php:230
-#: admin/class-woo-document-word-counter-admin.php:280
-#: admin/class-woo-document-word-counter-admin.php:324
 msgid "File successfully uploaded"
-msgstr "Fișierul a fost încărcat cu succes"
+msgstr ""
 
 #: admin/partials/woo-document-word-counter-admin-setting.php:207
 msgid "Grouped"
@@ -174,7 +164,7 @@ msgstr "https://xplication.com/"
 
 #: admin/class-woo-document-word-counter-admin.php:190
 msgid "Loading..."
-msgstr "Se încarcă..."
+msgstr ""
 
 #: admin/partials/woo-document-word-counter-html-custom-tab.php:95
 msgid "Max "
@@ -202,7 +192,6 @@ msgstr "Caractere Min"
 msgid "Min Words"
 msgstr "Cuvinte Min"
 
-#: admin/class-woo-document-word-counter-admin.php:572
 #: admin/partials/woo-document-word-counter-admin-setting.php:38
 msgid "Minimum Price"
 msgstr "Preț minim"
@@ -210,7 +199,6 @@ msgstr "Preț minim"
 #: admin/class-woo-document-word-counter-admin.php:180
 msgid "Please upload your .doc, .docx, .pdf or .txt to get a price."
 msgstr ""
-"Vă rugăm să încărcați .doc, .docx, .pdf sau .txt pentru a obține un preț."
 
 #: admin/partials/woo-document-word-counter-html-custom-tab.php:96
 msgid "Price ("
@@ -286,11 +274,6 @@ msgstr "Preț normal"
 msgid "Save changes"
 msgstr "Salvați modificările"
 
-#: admin/class-woo-document-word-counter-admin.php:337
-#: admin/class-woo-document-word-counter-admin.php:342
-msgid "security problem, wordpress nonce is not verified"
-msgstr "problema de securitate, wordpress nonce nu este verificat"
-
 #: admin/partials/woo-document-word-counter-admin-setting.php:121
 msgid ""
 "Select from the options below to enable or disable Price per "
@@ -326,33 +309,9 @@ msgstr "Simplu"
 msgid "Target"
 msgstr "Țintă"
 
-#: admin/class-woo-document-word-counter-admin.php:262
-#: admin/class-woo-document-word-counter-admin.php:306
-msgid ""
-"The file upload failed, Please choose a file having less %s than limit one."
-msgstr ""
-"Încărcarea fișierului nu a reușit. Alegeți un fișier cu mai puțin de %s "
-"decât limita de unul."
-
-#: admin/class-woo-document-word-counter-admin.php:285
-#: admin/class-woo-document-word-counter-admin.php:327
-msgid ""
-"The file upload failed, Please choose a valid file extension and try again."
-msgstr ""
-"Încărcarea fișierului nu a reușit. Alegeți o extensie de fișier validă și "
-"încercați din nou."
-
-#: admin/class-woo-document-word-counter-admin.php:473
-msgid "Total character: "
-msgstr "Total caracter:"
-
 #: admin/class-woo-document-word-counter-admin.php:520
 msgid "Total Price:"
 msgstr "Preț total:"
-
-#: admin/class-woo-document-word-counter-admin.php:468
-msgid "Total word: "
-msgstr "Cuvânt total:"
 
 #: admin/partials/woo-document-word-counter-admin-setting.php:205
 msgid "Variable"
@@ -402,14 +361,3 @@ msgstr "Cuvinte"
 #. Author of the plugin
 msgid "Xplication by Iftodi Petru"
 msgstr "Xplication de Iftodi Petru"
-
-#: admin/class-woo-document-word-counter-admin.php:259
-#: admin/class-woo-document-word-counter-admin.php:303
-msgid "Your file contains more %s than word cap limit. Maximum %s limit is %s"
-msgstr ""
-"Fișierul dvs. conține mai mult de %s decât limita maximă de cuvinte. Limita "
-"maximă %s este %s"
-
-#: admin/class-woo-document-word-counter-admin.php:284
-msgid "Your pdf file is secured or empty."
-msgstr "Fișierul dumneavoastră pdf este securizat sau gol."

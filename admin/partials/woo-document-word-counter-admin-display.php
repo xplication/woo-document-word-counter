@@ -3,9 +3,9 @@
 /**
  * @package    Woocommerce_Price_Per_Word
  * @subpackage Woocommerce_Price_Per_Word/admin
- * @author     Angell EYE <service@angelleye.com>
+ * @author     Iftodi Petru<petru.iftodi@xplication.ro>
  */
-class Woocommerce_Price_Per_Word_Admin_Display {
+class WooDocument_Word_Counter_Admin_Display {
 
     /**
      * Hook in methods
@@ -41,7 +41,7 @@ class Woocommerce_Price_Per_Word_Admin_Display {
      * @access   public
      */
     public static function woocommerce_price_per_word_option() {
-        $setting_tabs = apply_filters('woocommerce_price_per_word_setting_tab', array('general' => 'General', 'tools' => 'Tools'));
+        $setting_tabs = apply_filters('WooDocument_Word_Counter_Admin_Setting_tab', array('general' => 'General', 'tools' => 'Tools'));
         $current_tab = (isset($_GET['tab'])) ? $_GET['tab'] : 'general';
         ?>
         <h2 class="nav-tab-wrapper">
@@ -79,4 +79,4 @@ class Woocommerce_Price_Per_Word_Admin_Display {
 
 }
 
-Woocommerce_Price_Per_Word_Admin_Display::init();
+WooDocument_Word_Counter_Admin_Display::init();

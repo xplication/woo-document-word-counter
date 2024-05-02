@@ -1,6 +1,8 @@
 jQuery(function ($) {
     'use strict';
     $(function () {
+        const { __, _x, _n, sprintf } = wp.i18n;
+
         $(".cart").addClass("wppw_cart");
 
         if (typeof (woocommerce_price_per_word_params.aewcppw_word_character) != "undefined" && woocommerce_price_per_word_params.aewcppw_word_character !== null && woocommerce_price_per_word_params.aewcppw_word_character == 'word') {
